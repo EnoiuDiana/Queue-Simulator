@@ -27,3 +27,5 @@
 /subprojects/*/out
 /.teamcity/*.iml
 /.teamcity/target
+/.idea/
+
