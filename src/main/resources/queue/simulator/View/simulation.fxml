@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="queue.simulator.Controller.SimulationController">
+   <children>
+      <Label fx:id="time" layoutX="101.0" layoutY="52.0" prefHeight="23.0" prefWidth="26.0" />
+      <Button fx:id="start" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#startSimulation" text="Start simulation" />
+      <Label layoutX="25.0" layoutY="56.0" text="Second:" />
+      <Label layoutX="25.0" layoutY="103.0" text="Waiting queue:" />
+      <Label fx:id="waitingQueue" alignment="TOP_LEFT" layoutX="25.0" layoutY="126.0" prefHeight="662.0" prefWidth="113.0" />
+      <Label layoutX="214.0" layoutY="103.0" text="Queues:" />
+      <Label fx:id="queues" alignment="TOP_LEFT" layoutX="214.0" layoutY="129.0" prefHeight="662.0" prefWidth="662.0" />
+      <Label layoutX="214.0" layoutY="55.0" text="Average waiting time:" />
+      <Label fx:id="avgWaiting" layoutX="361.0" layoutY="55.0" prefHeight="15.0" prefWidth="50.0" />
+      <Label layoutX="450.0" layoutY="55.0" text="Average service time:" />
+      <Label fx:id="avgService" layoutX="591.0" layoutY="55.0" prefHeight="15.0" prefWidth="50.0" />
+      <Label layoutX="696.0" layoutY="56.0" text="Peak Hour:" />
+      <Label fx:id="peakHour" layoutX="782.0" layoutY="55.0" prefHeight="15.0" prefWidth="50.0" />
+   </children>
+</AnchorPane>

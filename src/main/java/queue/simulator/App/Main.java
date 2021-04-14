@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import queue.simulator.Model.Timer;
 
 import java.io.IOException;
 
@@ -19,15 +18,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Parent root;
         try{
-            root = FXMLLoader.load(getClass().getResource("/queue/simulator/View/scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/queue/simulator/View/setup.fxml"));
         } catch(IOException e) {
             throw new RuntimeException(e);
         }
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        Timer newTimer = new Timer(15);
-        newTimer.start();
     }
+
 }
