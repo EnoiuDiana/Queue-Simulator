@@ -14,7 +14,7 @@ import java.io.IOException;
 
 import static queue.simulator.Model.SelectionPolicy.SHORTEST_TIME;
 
-public class HomeController {
+public class SetupController {
 
     @FXML
     private TextField noOfTasksTextField;

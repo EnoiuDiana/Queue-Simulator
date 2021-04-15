@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="480.92555555555555" y="257.0">queue.simulator.Model.Server</node>
+    <node x="246.92555555555552" y="516.0">queue.simulator.Model.Strategy</node>
+    <node x="58.22999999999996" y="653.5">queue.simulator.Model.ConcreteStrategyTime</node>
+    <node x="374.92555555555555" y="653.5">queue.simulator.Model.ConcreteStrategyQueue</node>
+    <node x="166.08333333333334" y="0.0">queue.simulator.Model.Task</node>
+    <node x="421.97999999999996" y="811.0">queue.simulator.Model.Scheduler</node>
+    <node x="645.73" y="620.0">queue.simulator.Model.SelectionPolicy</node>
+    <node x="29.42555555555549" y="312.5">queue.simulator.Model.GenerateTasks</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="queue.simulator.Model.Scheduler" target="queue.simulator.Model.Strategy">
+      <point x="-49.5" y="-60.5" />
+      <point x="504.47999999999996" y="771.0" />
+      <point x="352.92555555555555" y="771.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="queue.simulator.Model.ConcreteStrategyTime" target="queue.simulator.Model.Strategy">
+      <point x="70.66666666666663" y="-27.0" />
+      <point x="234.8966666666666" y="595.0" />
+      <point x="282.2588888888888" y="595.0" />
+      <point x="-70.66666666666669" y="27.0" />
+    </edge>
+    <edge source="queue.simulator.Model.ConcreteStrategyQueue" target="queue.simulator.Model.Server">
+      <point x="72.0" y="-27.0" />
+      <point x="554.9255555555555" y="595.0" />
+      <point x="600.3888888888889" y="595.0" />
+      <point x="600.3888888888889" y="496.0" />
+      <point x="575.9255555555555" y="496.0" />
+      <point x="-19.0" y="104.5" />
+    </edge>
+    <edge source="queue.simulator.Model.Scheduler" target="queue.simulator.Model.ConcreteStrategyQueue">
+      <point x="-16.5" y="-60.5" />
+      <point x="537.48" y="761.0" />
+      <point x="482.92555555555555" y="761.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="queue.simulator.Model.Scheduler" target="queue.simulator.Model.Task">
+      <point x="-115.5" y="-60.5" />
+      <point x="438.47999999999996" y="791.0" />
+      <point x="0.0" y="791.0" />
+      <point x="0.0" y="207.0" />
+      <point x="176.0277777777778" y="207.0" />
+      <point x="-79.55555555555554" y="93.5" />
+    </edge>
+    <edge source="queue.simulator.Model.ConcreteStrategyTime" target="queue.simulator.Model.Task">
+      <point x="-70.66666666666669" y="-27.0" />
+      <point x="93.56333333333328" y="595.0" />
+      <point x="18.92555555555549" y="595.0" />
+      <point x="18.92555555555549" y="217.0" />
+      <point x="195.91666666666666" y="217.0" />
+      <point x="-59.666666666666686" y="93.5" />
+    </edge>
+    <edge source="queue.simulator.Model.Scheduler" target="queue.simulator.Model.Server">
+      <point x="16.5" y="-60.5" />
+      <point x="570.48" y="781.0" />
+      <point x="613.23" y="781.0" />
+      <point x="19.0" y="104.5" />
+    </edge>
+    <edge source="queue.simulator.Model.ConcreteStrategyTime" target="queue.simulator.Model.Server">
+      <point x="0.0" y="-27.0" />
+      <point x="164.22999999999996" y="486.0" />
+      <point x="499.92555555555555" y="486.0" />
+      <point x="-95.0" y="104.5" />
+    </edge>
+    <edge source="queue.simulator.Model.ConcreteStrategyQueue" target="queue.simulator.Model.Strategy">
+      <point x="-72.0" y="-27.0" />
+      <point x="410.92555555555555" y="595.0" />
+      <point x="423.5922222222222" y="595.0" />
+      <point x="70.66666666666669" y="27.0" />
+    </edge>
+    <edge source="queue.simulator.Model.Strategy" target="queue.simulator.Model.Task">
+      <point x="-53.0" y="-27.0" />
+      <point x="299.92555555555555" y="237.0" />
+      <point x="275.4722222222222" y="237.0" />
+      <point x="19.888888888888857" y="93.5" />
+    </edge>
+    <edge source="queue.simulator.Model.Scheduler" target="queue.simulator.Model.ConcreteStrategyTime">
+      <point x="-82.5" y="-60.5" />
+      <point x="471.47999999999996" y="781.0" />
+      <point x="164.22999999999996" y="781.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="queue.simulator.Model.GenerateTasks" target="queue.simulator.Model.Task">
+      <point x="86.66666666666669" y="-49.0" />
+      <point x="246.09222222222218" y="237.0" />
+      <point x="255.58333333333334" y="237.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="queue.simulator.Model.ConcreteStrategyQueue" target="queue.simulator.Model.Task">
+      <point x="0.0" y="-27.0" />
+      <point x="482.92555555555555" y="595.0" />
+      <point x="470.42555555555555" y="595.0" />
+      <point x="470.42555555555555" y="227.0" />
+      <point x="295.3611111111111" y="227.0" />
+      <point x="39.77777777777777" y="93.5" />
+    </edge>
+    <edge source="queue.simulator.Model.Server" target="queue.simulator.Model.Task">
+      <point x="57.0" y="-104.5" />
+      <point x="651.9255555555555" y="207.0" />
+      <point x="335.1388888888889" y="207.0" />
+      <point x="79.55555555555554" y="93.5" />
+    </edge>
+    <edge source="queue.simulator.Model.Scheduler" target="queue.simulator.Model.SelectionPolicy">
+      <point x="115.5" y="-60.5" />
+      <point x="669.48" y="791.0" />
+      <point x="752.23" y="791.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="queue.simulator.Model.Strategy" target="queue.simulator.Model.Server">
+      <point x="53.0" y="-27.0" />
+      <point x="405.92555555555555" y="496.0" />
+      <point x="537.9255555555555" y="496.0" />
+      <point x="-57.0" y="104.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="727.0" y="428.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>protected</VISIBILITY>
+</Diagram>
+

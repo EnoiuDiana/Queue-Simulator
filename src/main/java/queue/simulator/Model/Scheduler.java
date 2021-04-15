@@ -6,14 +6,10 @@ import java.util.List;
 public class Scheduler {
 
     private final List<Server> servers;
-    private int noOfServers;
-    private int maxTasksPerServer;
     private Strategy strategy;
 
-    public Scheduler(int noOfServers, int maxTasksPerServer) {
+    public Scheduler(int noOfServers) {
         this.servers = new ArrayList<>();
-        this.noOfServers = noOfServers;
-        this.maxTasksPerServer = maxTasksPerServer;
         for(int i = 0; i < noOfServers; i++) {
             Server newServer = new Server(i);
             servers.add(newServer);
@@ -24,7 +20,7 @@ public class Scheduler {
 
     public void implementStrategy(SelectionPolicy policy) {
         if(policy == SelectionPolicy.SHORTEST_QUEUE) {
-            //TODO implement
+            strategy = new ConcreteStrategyQueue();
         }
         if(policy == SelectionPolicy.SHORTEST_TIME) {
             strategy = new ConcreteStrategyTime();

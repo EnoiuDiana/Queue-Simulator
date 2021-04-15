@@ -36,7 +36,7 @@ public class SimulationManager implements Runnable{
         this.simulationController = simulationController;
     }
     private void startServers() {
-        this.scheduler = new Scheduler(noOfServers, noOfTasks);
+        this.scheduler = new Scheduler(noOfServers);
         scheduler.implementStrategy(selectionPolicy);
     }
 
@@ -58,7 +58,7 @@ public class SimulationManager implements Runnable{
                     taskIterator.remove();
                 }
             }
-            computeStringsToUpdateGui(time);
+            computeStrings(time);
             int tasksAtTheMoment = helpComputePeakHour();
             if(maxTasksPerHour < tasksAtTheMoment) {
                 maxTasksPerHour = tasksAtTheMoment;
@@ -81,7 +81,7 @@ public class SimulationManager implements Runnable{
 
     }
 
-    private void computeStringsToUpdateGui(String time) {
+    private void computeStrings(String time) {
         StringBuilder waitingQueueForSim = new StringBuilder();
         StringBuilder waitingQueue = new StringBuilder();
         for(Task task : generatedTasks) {
@@ -126,6 +126,6 @@ public class SimulationManager implements Runnable{
     }
 
     private void updateGUI(String time, String waitingQueue, String queues, String waitingQueueForSim, String queuesForSim) {
-        this.simulationController.printToLabel(time, waitingQueue, queues, waitingQueueForSim, queuesForSim);
+        this.simulationController.printSimulationUpdates(time, waitingQueue, queues, waitingQueueForSim, queuesForSim);
     }
 }

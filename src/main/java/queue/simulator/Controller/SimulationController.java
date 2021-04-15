@@ -41,7 +41,7 @@ public class SimulationController {
 
 
 
-    public void printToLabel(String time, String waitingQueue, String queues, String waitingQueueForSim, String queuesForSim) {
+    public void printSimulationUpdates(String time, String waitingQueue, String queues, String waitingQueueForSim, String queuesForSim) {
         this.time.setText(time);
         this.waitingQueue.setText(waitingQueueForSim);
         this.queues.setText(queuesForSim);
